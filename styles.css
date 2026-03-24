@@ -339,3 +339,24 @@ section {
   }
 
 }
+/* CONTENEDOR DE CUADROS */
+.slides-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 📱 RESPONSIVE REAL */
+@media (max-width: 768px) {
+
+  .slides-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide {
+    width: 90%;
+  }
+
+}
