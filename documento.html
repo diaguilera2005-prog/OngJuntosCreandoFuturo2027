@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Documento</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav>
+  <h2>ONG JUNTOS CREANDO FUTURO</h2>
+    <img src="img/logo.png" class="logo">
+  <div>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quiénes somos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="galeria.html">Nuestra Galeria</a>
+  </div>
+</nav>
+
+<section>
+
+  <h1 id="tituloDoc">Documento</h1>
+
+
+  <iframe id="visor" width="100%" height="600px"></iframe>
+
+  <br><br>
+
+  <a id="descarga" class="btn" download>Descargar documento</a>
+
+  <br><br>
+
+
+  <a href="index.html" class="btn">← Volver al inicio</a>
+  <a href="documentos.html" class="btn">← Elegir otro documento</a>
+
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const doc = params.get("doc");
+  const titulo = params.get("titulo");
+
+  if (doc) {
+    document.getElementById("visor").src = "documentos/" + doc;
+    document.getElementById("descarga").href = "documentos/" + doc;
+  }
+
+  if (titulo) {
+    document.getElementById("tituloDoc").textContent = titulo;
+  }
+</script>
+
+</body>
+</html>

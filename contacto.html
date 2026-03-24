@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav>
+  <h2>ONG JUNTOS CREANDO FUTURO</h2>
+    <img src="img/logo.png" class="logo">
+  <div>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quiénes somos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="index.html" class="btn">← Volver al inicio</a>
+    <a href="galeria.html">Nuestra Galeria</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="slides">
+  <section class="contacto-container">
+
+  <h1>Contacto</h1>
+
+  <form action="https://formspree.io/f/mojkrzla" method="POST" class="formulario">
+
+    <div class="input-group">
+      <input type="text" name="nombre" required>
+      <label>Nombre</label>
+    </div>
+
+    <div class="input-group">
+      <input type="email" name="email" required>
+      <label>Correo</label>
+    </div>
+
+    <div class="input-group">
+      <textarea name="mensaje" required></textarea>
+      <label>Mensaje</label>
+    </div>
+
+    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+<div class="slide active">
+  <h2>Nuestra Dirección:</h2>
+  <p>Calle Dr Manuel Rioseco 1295 oficina 303, Los Ángeles, Biobío, Chile.</p>
+
+  <a href="https://www.google.com/maps/search/?api=1&query=Calle+Dr+Manuel+Rioseco+1295+oficina+303+Los+Angeles+Chile" 
+     target="_blank" 
+     class="btn">
+    📍 Buscar aquí
+  </a>
+</div>
+
+  </form>
+
+
+<a href="https://wa.me/56912345678?text=Hola%20me%20gustaria%20ayudar%20a%20la%20ONG" 
+   target="_blank" 
+   class="whatsapp-btn">
+  <img src="img/whatsapp.png" class="whatsapp-icon">
+</a>
+
+  </section>
+  </div>
+</section>
+
+</body>
+</html>

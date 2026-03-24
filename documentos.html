@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Documento</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav>
+  <h2>ONG JUNTOS CREANDO FUTURO</h2>
+    <img src="img/logo.png" class="logo">
+  <div>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quiénes somos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="galeria.html">Nuestra Galeria</a>
+  </div>
+</nav>
+
+<section>
+
+  <h1 id="tituloDoc">Documentos</h1>
+  <h1 id="tituloDoc">Selecciona un documento</h1>
+  <div class="doc-grid">
+
+    <a href="documento.html?doc=estados-financieros.pdf&titulo=Estados Financieros" class="doc-btn">
+      Estados financieros
+    </a>
+
+    <a href="documento.html?doc=ley-20032.pdf&titulo=Información art. N°15 ley 20.032" class="doc-btn">
+      Información art. N°15 ley 20.032
+    </a>
+
+    <a href="documento.html?doc=mdp.pdf&titulo=MDP" class="doc-btn">
+      MDP
+    </a>
+
+    <a href="documento.html?doc=convenios-proteccion.pdf&titulo=Convenios Servicio Protección" class="doc-btn">
+      Convenios Servicio Protección
+    </a>
+
+    <a href="documento.html?doc=convenios-mejor-ninez.pdf&titulo=Convenios Mejor Niñez" class="doc-btn">
+      Convenios Mejor Niñez
+    </a>
+
+    <a href="documento.html?doc=memoria.pdf&titulo=Memoria 2024-2025" class="doc-btn">
+      Memoria 2024-2025
+    </a>
+
+    <a href="documento.html?doc=gastos.pdf&titulo=Gastos administrativos" class="doc-btn">
+      Gastos administrativos
+    </a>
+
+    <a href="documento.html?doc=indicadores.pdf&titulo=Indicadores de gestión" class="doc-btn">
+      Indicadores de gestión
+    </a>
+
+    <a href="documento.html?doc=equipos.pdf&titulo=Equipos y proyectos" class="doc-btn">
+      Equipos y proyectos
+    </a>
+
+    <a href="documento.html?doc=recursos.pdf&titulo=Recursos recibidos" class="doc-btn">
+      Recursos recibidos
+    </a>
+    <a href="galeria.html" class="doc-btn">
+      Visita nuestra galeria de imagenes
+    </a>
+
+
+  </div>
+
+  <!-- VISOR -->
+  <iframe id="visor" width="100%" height="600px"></iframe>
+
+  <br><br>
+
+  <!-- DESCARGA -->
+  <a id="descarga" class="btn" download>Descargar documento</a>
+
+  <br><br>
+
+  <!-- VOLVER -->
+  <a href="index.html" class="btn">← Volver al inicio</a>
+
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const doc = params.get("doc");
+  const titulo = params.get("titulo");
+
+  if (doc) {
+    document.getElementById("visor").src = "documentos/" + doc;
+    document.getElementById("descarga").href = "documentos/" + doc;
+  }
+
+  if (titulo) {
+    document.getElementById("tituloDoc").textContent = titulo;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ONG JUNTOS CREANDO FUTURO</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+
+<nav>
+  <h2>ONG JUNTOS CREANDO FUTURO</h2>
+  <img src="img/logo.png" class="logo">
+  <div>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quiénes somos</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="galeria.html">Nuestra Galeria</a>
+    <a href="documentos.html"> Visita Nuestros documentos </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="overlay">
+
+    <h1>Transformando el futuro de la infancia</h1>
+
+
+    <div class="slider">
+
+      <div class="slides">
+
+        <div class="slide active">
+          <h2>Nuestra Mision</h2>
+          <p>Apoyar a niños, niñas y adolescentes, en situación de vulnerabilidad.</p>
+          <a href="nosotros.html" class="btn">Ver más</a>
+        </div>
+
+        <div class="slide">
+          <h2>Nuestra Vision</h2>
+          <p>garantizar que ningún niño quede atrás, promoviendo una infancia digna, segura y con igualdad.</p>
+          <a href="nosotros.html" class="btn">Ver más</a>
+        </div>
+
+        <div class="slide">
+          <h2>Transparencia</h2>
+          <p>Consulta nuestros documentos y estados financieros.</p>
+          <a href="documentos.html" class="btn">Ver más</a>
+        </div>
+
+      </div>
+
+      <div class="dots">
+        <span onclick="moveSlide(0)" class="dot active"></span>
+        <span onclick="moveSlide(1)" class="dot"></span>
+        <span onclick="moveSlide(2)" class="dot"></span>
+      </div>
+
+    </div>
+
+    <p>Apoyamos a niños y familias</p>
+
+  </div>
+</section>
+
+<a href="https://wa.me/56912345678?text=Hola%20me%20gustaria%20ayudar%20a%20la%20ONG" 
+   target="_blank" 
+   class="whatsapp-btn">
+  <img src="img/whatsapp.png" class="whatsapp-icon">
+</a>
+
+
+<button id="chatBtn">💬</button>
+
+
+<div id="chatBox">
+  <div id="messages"></div>
+  <button onclick="responder('quienes son')">¿Quiénes somos?</button>
+  <button onclick="responder('mision')">Misión</button>
+  <button onclick="responder('vision')">Visión</button>
+  <button onclick="responder('contacto')">Contacto</button>
+  <button onclick="responder('direccion')">Dirección</button>
+  <button onclick="responder('Que escribo para contactarlos')">Que escribo para contactarlos</button>
+  <input type="text" id="userInput" placeholder="Escribe...">
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
